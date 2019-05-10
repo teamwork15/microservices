@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ADMINISTRATOR</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body class="bg-danger">
+<nav class="navbar navbar-dark bg-danger">
+<div class="container">
+<a class="navbar-brand" href="#">Admin Home</a>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+
+<li><a th:href="@{/admin/login}">LOGIN</a></li>
+<li><a th:href="@{/admin/register}">REGISTER</a>
+</ul>
+
+</div>
+<div class="jumbotron">
+<h1 class="text-warning">Welcome To The Admin Section</h1>
+<p class="text-danger">As the Administrator your role will be adding lecturers to the system and removing them if need be<br>
+Adding units to the system for viewing by students will also be another role of the Administrator<br>
+Incase of a new Administrator register using the link below the login button</p>
+
+</div>
+</div>
+
+</nav>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

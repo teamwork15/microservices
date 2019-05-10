@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UNITS</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/920432331089-wallpaper-thrones-game-lost-wallpapers-atlantis-city-joschkit-eddard-stark-d7pxqjt-art.jpg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<table class="table table-bordered table-hover">
+<tr>
+<th>UNIT CODE</th>
+<th>UNIT TITLE</th>
+<th>TYPE</th>
+<th>DESCRIPTION</th>
+<th>REGNO</th>
+</tr>
+<tr th:each="list:${myList}">
+<td th:text="${list.unitCode}"></td>
+<td th:text=${list.unitTitle}></td>
+<td th:text=${list.type}></td>
+<td th:text=${list.description}></td>
+<td th:text=${list.regno}></td>
+</tr>
+</table>
+<div  class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

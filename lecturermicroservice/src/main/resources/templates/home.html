@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LECTURER</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/39.jpg">
+<nav class="navbar navbar-dark bg-danger">
+<div class="container">
+<a class="navbar-brand" href="#">Admin Home</a>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+
+<li><a th:href="@{/ui/lecturerlogin}">LOGIN</a></li>
+</ul>
+
+</div>
+<div class="jumbotron">
+<h1 class="text-warning">Welcome To The Lecturer Section</h1>
+<p class="text-danger">As the Lecturer your role will be adding marks to the system for viewing by student<br>
+Viewing complains from the students regarding  the posted marks will also be another role of the Lecturer<br>
+</p>
+
+</div>
+</div>
+
+</nav>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

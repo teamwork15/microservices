@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Units</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/468739.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<br>
+<form action="/student/sendcomplain"  method="post" >
+<p></p>
+<div>
+<select class="custom-select" name="type">
+<option></option>
+<option value="Remark">Remark</option>
+<option value="Missing-Mark">Missing</option>
+<option value="General">General</option>
+</select>
+</div>
+<p></p>
+<div class="form-group">
+<label for="myDepartment">Description</label>
+<textarea class="form-control" rows="10" cols="20" id="myDepartment" placeholder="Description" name="description"></textarea>
+</div>
+<input type="hidden" name="regno" th:value="${regno}">
+<input type="hidden" name="unitCode" th:value="${unitCode}">
+<input type="hidden" name="unitTitle" th:value="${unitTitle}">
+<input type="hidden" name="lecturerId" th:value="${lecturerId}">
+<button type="submit" class="btn btn-default">OK</button>
+</form>
+<div class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

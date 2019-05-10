@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Units</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/eliabe-costa-702725-unsplash.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<br>
+<form action="/admin/addunits"  method="post" >
+
+<div class="form-group">
+<label for="myCode">Unit Code</label>
+<input class="form-control" id="myCode" placeholder="Code" type="text" name="unitCode">
+</div>
+<div class="form-group">
+<label for="myTitle">Unit Title</label>
+<input class="form-control" id="myTitle" placeholder="Title" type="text" name="unitTitle">
+</div>
+<div class="form-group">
+<label for="myCredits">Credits</label>
+<input class="form-control" id="myCredits" placeholder="Credits" type="text" name="credits">
+</div>
+<div class="form-group">
+<label for="myDepartment">Department</label>
+<input class="form-control" id="myDepartment" placeholder="Department" type="text" name="department">
+</div>
+<div class="form-group">
+<label for="myYear">Year</label>
+<input class="form-control" id="myYear" placeholder="1" type="text" name="year">
+</div>
+<button type="submit" class="btn btn-default">OK</button>
+</form>
+<div class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

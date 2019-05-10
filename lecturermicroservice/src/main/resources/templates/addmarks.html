@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MARKS</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/photo-1507842217343-583bb7270b66.jpg">
+<div class="container">
+<div class="row">
+<div class="col-md-offset-3 col-md-3">
+<br>
+<form action="/ui/addmarks"  method="post" >
+
+<div class="form-group">
+<label for="myCode">Unit Code</label>
+<input class="form-control" id="myCode" placeholder="Code" type="text" name="unitCode">
+</div>
+<div class="form-group">
+<label for="myTitle">Unit Title</label>
+<input class="form-control" id="myTitle" placeholder="Title" type="text" name="unitTitle">
+</div>
+<div class="form-group">
+<label for="myCredits">Credits</label>
+<input class="form-control" id="myCredits" placeholder="Credits" type="text" name="credits">
+</div>
+<div class="form-group">
+<label for="myScore">Score</label>
+<input class="form-control" id="myScore" placeholder="Score" type="text" name="score">
+</div>
+<div class="form-group">
+<label for="myGrade">Grade</label>
+<input class="form-control" id="myGrade" placeholder="Grade" type="text" name="grade">
+</div>
+<div class="form-group">
+<label for="myRegno">Regno</label>
+<input class="form-control" id="myRegno" placeholder="Regno" type="text" name="regno">
+</div>
+<input type="hidden" name="lecturerId" th:value="${lecturerId}">
+
+<button type="submit" class="btn btn-default">OK</button>
+</form>
+<div class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

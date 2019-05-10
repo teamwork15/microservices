@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UNITS</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/fahrul-azmi-586479-unsplash.jpg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<table class="table table-bordered table-hover">
+<tr>
+<th>UNIT CODE</th>
+<th>UNIT TITLE</th>
+<th>DEPARTMENT</th>
+<th>YEAR</th>
+<th>DELETE</th>
+</tr>
+<tr th:each="unit:${unitslist}">
+<td th:text="${unit.unitCode}"></td>
+<td th:text=${unit.unitTitle}></td>
+<td th:text=${unit.department}></td>
+<td th:text=${unit.year}></td>
+<td><a th:href="@{/admin/deleteunit(unitCode=${unit.unitCode})}">DELETE</a></td>
+</tr>
+</table>
+<div  class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>

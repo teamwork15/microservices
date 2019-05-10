@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MARKS</title>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body background="/images/920432331089-wallpaper-thrones-game-lost-wallpapers-atlantis-city-joschkit-eddard-stark-d7pxqjt-art.jpg">
+<div class="container">
+<div class="row">
+<div class="col-lg-3">
+<br>
+<table class="table table-bordered table-hover">
+<tr>
+<th>UNIT CODE</th>
+<th>UNIT TITLE</th>
+<th>CREDITS</th>
+<th>SCORE</th>
+<th>GRADE</th>
+<th>LECTURER ID</th>
+<th>COMPLAIN</th>
+
+</tr>
+<tr th:each="list:${myList}">
+<td th:text="${list.unitCode}"></td>
+<td th:text="${list.unitTitle}"></td>
+<td th:text="${list.credits}"></td>
+<td th:text="${list.score}"></td>
+<td th:text="${list.grade}"></td>
+<td th:text="${list.lecturerId}"></td>
+<td><a th:href="@{/student/mycomplain(unitCode=${list.unitCode},unitTitle=${list.unitTitle},regno=${regno},lecturerId=${list.lecturerId})}">COMPLAIN</a></td>
+</tr>
+</table>
+<div  class="text-success">
+<h6 th:text="${message}"></h6>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="/js/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+</body>
+</html>
